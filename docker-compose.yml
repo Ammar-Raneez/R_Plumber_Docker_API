@@ -1,0 +1,17 @@
+version: '3'
+name: plumber-docker
+services:
+  api:
+    container_name: api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - ${PORT}:${PORT}
+    networks:
+      - plumber_network
+    env_file:
+      - .env
+
+networks:
+  plumber_network:
