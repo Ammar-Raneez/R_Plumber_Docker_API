@@ -4,12 +4,12 @@ A simple example of a Plumber API that can be dockerized and run using environme
 
 Build the docker container
 ```
-docker-compose build
+docker-compose --env-file .env build
 ```
 
 Run the container
 ```
-docker-compose up
+docker-compose --env-file .env up
 ```
 
 Access the API at `http://localhost:8000/healthy`
